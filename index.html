@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>back and forth</title>
+        <style>
+         h1 {
+             display: none;
+         }
+         h1.show {
+             display: block;
+         }
+        </style>
+    </head>
+    <body>
+        <h1 id="1" class="show">))<>((</h1>
+        <h1 id="2">))>&nbsp;((</h1>
+        <h1 id="3">))<>((</h1>
+        <h1 id="4">))&nbsp;<((</h1>
+        <script>
+            var index = 1;
+            setInterval(function() {
+                var element = document.getElementById(index);
+                element.classList.remove("show");
+                index = index + 1;
+                if (index > 4) {
+                    index = 1;
+                }
+                var element = document.getElementById(index);
+                element.classList.add("show");
+            }, 1000);
+        </script>
+    </body>
+</html>
